@@ -1,5 +1,5 @@
 //
-//  MulleObjCArchiver+Private.h
+//  MulleObjCArchiver-Private.h
 //  MulleObjCStandardFoundation
 //
 //  Copyright (c) 2016 Nat! - Mulle kybernetiK.
