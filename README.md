@@ -1,16 +1,42 @@
-# MulleObjCStandardFoundation
+# MulleObjCArchiverFoundation
 
-#### 🚤 Platform-independent Objective-C classes, like NSString, NSArray, NSNotificationCenter
+#### 🚪 NSCoding classes like NSArchiver/NSUnarchiver
 
-These classes build on **MulleObjC** and **mulle-core** to provide the usual
-classes expected in a Foundation library, that require no more than the
-standard C libraries.
+These classes help with serializing objects. Typically you serialize them
+into a file or into an NSData for transport over the internet.
+
+Binary serialization has somewhat fallen out of favor recently, but can still
+be useful for caches and the like.
 
 
+Class               | Description
+--------------------|-----------------------
+`NSCoder`           |
+`NSArchiver`        |
+`NSKeyedArchiver`   |
+`NSUnarchiver`      |
+`NSKeyedUnarchiver` |
 
-Build Status | Release Version
--------------|-----------------------------------
-[![Build Status](https://travis-ci.org/MulleFoundation/MulleObjCStandardFoundation.svg?branch=release)](https://travis-ci.org/MulleFoundation/MulleObjCStandardFoundation) | ![Mulle kybernetiK tag](https://img.shields.io/github/tag/MulleFoundation/MulleObjCStandardFoundation.svg) [![Build Status](https://travis-ci.org/MulleFoundation/MulleObjCStandardFoundation.svg?branch=release)](https://travis-ci.org/MulleFoundation/MulleObjCStandardFoundation)
+
+### You are here
+
+```
+  .-------------------------------------------------------------------.
+  | Foundation                                                        |
+  '-------------------------------------------------------------------'
+  .---------------------------------------------.
+  | HTTP                                        |
+  '---------------------------------------------'
+  .------------------..=========================..---------..---------.
+  | InetOS           || MulleFoundation         || Expat   || JSMN    |
+  '------------------''=========================''---------''---------'
+  .-------------..---------------------..-----------------------------.
+  | Inet        || OS                  || Plist                       |
+  '-------------''---------------------''-----------------------------'
+  .---------..--------------------------------------------------------.
+  | Lock    || Standard                                               |
+  '---------''--------------------------------------------------------'
+```
 
 
 ## Install
@@ -22,6 +48,7 @@ installation instructions.
 
 Parts of this library:
 
+```
 Copyright (c) 2006-2007 Christopher J. W. Lloyd
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -39,7 +66,7 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
-
+```
 
 ## Author
 

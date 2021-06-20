@@ -5,9 +5,8 @@
 //  Created by Nat! on 19.04.16.
 //  Copyright © 2016 Mulle kybernetiK. All rights reserved.
 //
-
-
-#import <MulleObjCStandardFoundation/MulleObjCStandardFoundation.h>
+#import <MulleObjCArchiverFoundation/MulleObjCArchiverFoundation.h>
+#import <MulleObjC/NSDebug.h>
 
 
 static void    clone_dictionary( int n)

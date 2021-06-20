@@ -5,9 +5,7 @@
 //  Created by Nat! on 19.04.16.
 //  Copyright © 2016 Mulle kybernetiK. All rights reserved.
 //
-
-
-#import <MulleObjCStandardFoundation/MulleObjCStandardFoundation.h>
+#import <MulleObjCArchiverFoundation/MulleObjCArchiverFoundation.h>
 
 
 @interface Foo : NSObject <NSCoding>
@@ -55,8 +53,8 @@
 
 - (void) setStr:(char *) s
 {
-   MulleObjCObjectDeallocateMemory( self, _str);
-   _str = s ? MulleObjCObjectDuplicateCString( self, s) : s;
+   MulleObjCInstanceDeallocateMemory( self, _str);
+   _str = s ? MulleObjCInstanceDuplicateCString( self, s) : s;
 }
 
 @end
