@@ -1,5 +1,6 @@
 #ifdef __MULLE_OBJC__
-# import <MulleObjCStandardFoundation/MulleObjCStandardFoundation.h>
+# import <MulleObjCArchiverFoundation/MulleObjCArchiverFoundation.h>
+# import <MulleObjC/NSDebug.h>
 #else
 # import <Foundation/Foundation.h>
 #endif
@@ -15,7 +16,7 @@
 
 
 // just don't leak anything
-main()
+int   main( int argc, char *argv[])
 {
 #ifdef __MULLE_OBJC__
    if( mulle_objc_global_check_universe( __MULLE_OBJC_UNIVERSENAME__) !=

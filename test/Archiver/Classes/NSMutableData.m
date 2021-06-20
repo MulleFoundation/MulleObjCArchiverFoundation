@@ -5,13 +5,11 @@
 //  Created by Nat! on 19.04.16.
 //  Copyright © 2016 Mulle kybernetiK. All rights reserved.
 //
-
-
-#import <MulleObjCStandardFoundation/MulleObjCStandardFoundation.h>
+#import <MulleObjCArchiverFoundation/MulleObjCArchiverFoundation.h>
 
 
 
-static id    clone( id obj)
+static void    clone( id obj)
 {
    NSData   *data;
    id       copy;
@@ -40,10 +38,10 @@ static mulle_utf8_t    hoehoe[] =
 
 @implementation NSData  ( TestLazyiness)
 
-+ (id) dataWithUTF8String:(mulle_utf8_t *) s
++ (id) dataWithUTF8String:(char *) s
 {
   return( [self dataWithBytes:s
-                       length:mulle_utf8_strlen( s)]);
+                       length:mulle_utf8_strlen( (mulle_utf8_t *) s)]);
 }
 @end
 
@@ -78,7 +76,7 @@ int main(int argc, const char * argv[])
   clone( [NSMutableData dataWithUTF8String:"abcdefghijklmnoprstuvwx"]);
   clone( [NSMutableData dataWithUTF8String:"abcdefghijklmnoprstuvwxy"]);
   clone( [NSMutableData dataWithUTF8String:"abcdefghijklmnoprstuvwxyz"]);
-  clone( [NSMutableData dataWithUTF8String:hoehoe]);
+  clone( [NSMutableData dataWithUTF8String:(char *) hoehoe]);
 
   return( 0);
 }

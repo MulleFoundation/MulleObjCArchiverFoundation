@@ -5,9 +5,7 @@
 //  Created by Nat! on 19.04.16.
 //  Copyright © 2016 Mulle kybernetiK. All rights reserved.
 //
-
-
-#import <MulleObjCStandardFoundation/MulleObjCStandardFoundation.h>
+#import <MulleObjCArchiverFoundation/MulleObjCArchiverFoundation.h>
 
 
 
@@ -69,7 +67,7 @@ int main(int argc, const char * argv[])
   clone( [NSMutableString stringWithUTF8String:"abcdefghijklmnoprstuvwx"]);
   clone( [NSMutableString stringWithUTF8String:"abcdefghijklmnoprstuvwxy"]);
   clone( [NSMutableString stringWithUTF8String:"abcdefghijklmnoprstuvwxyz"]);
-  clone( [NSMutableString stringWithUTF8String:hoehoe]);
+  clone( [NSMutableString stringWithUTF8String:(char *) hoehoe]);
 
   return( 0);
 }

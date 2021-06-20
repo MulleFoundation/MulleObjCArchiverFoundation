@@ -7,7 +7,7 @@
 //
 
 
-#import <MulleObjCStandardFoundation/MulleObjCStandardFoundation.h>
+#import <MulleObjCArchiverFoundation/MulleObjCArchiverFoundation.h>
 
 
 
@@ -69,6 +69,6 @@ int main(int argc, const char * argv[])
   clone( [NSString stringWithUTF8String:"abcdefghijklmnoprstuvwx"]);
   clone( [NSString stringWithUTF8String:"abcdefghijklmnoprstuvwxy"]);
   clone( [NSString stringWithUTF8String:"abcdefghijklmnoprstuvwxyz"]);
-  clone( [NSString stringWithUTF8String:hoehoe]);
+  clone( [NSString stringWithUTF8String:(char *) hoehoe]);
   return( 0);
 }
