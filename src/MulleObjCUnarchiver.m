@@ -537,7 +537,7 @@ static int   check_header_8( struct mulle_buffer *buffer, char *expect)
 }
 
 
-- (char *) _nextCString
+- (char *) _nextUTF8String
 {
    struct blob    *blob;
 
@@ -687,7 +687,7 @@ static int   check_header_8( struct mulle_buffer *buffer, char *expect)
                       return( (long double *) p + 1);
 
    case _C_CHARPTR  : //assert( ! *(char **) p);  // leak protection
-                      *(char **) p = MulleObjCInstanceDuplicateCString( self, [self _nextCString]); /* BUG! #1# */
+                      *(char **) p = MulleObjCInstanceDuplicateUTF8String( self, [self _nextUTF8String]); /* BUG! #1# */
                       return( (char *) p + 1);
 
    case _C_COPY_ID  :
