@@ -192,13 +192,16 @@ static void   codecValuesOfObjCTypes( NSCoder< NSObject> *self,
 
 - (void) encodeValuesOfObjCTypes:(char *) types, ...
 {
-   mulle_vararg_list     arguments;
+   mulle_vararg_list   arguments;
 
-   mulle_vararg_start(arguments,types);
+   mulle_vararg_start( arguments, types);
 
-   codecValuesOfObjCTypes( (NSCoder< NSObject> *) self, types, arguments, @selector(encodeValueOfObjCType:at:));
+   codecValuesOfObjCTypes( (NSCoder< NSObject> *) self,
+                           types,
+                           arguments,
+                           @selector(encodeValueOfObjCType:at:));
 
-   mulle_vararg_end(arguments);
+   mulle_vararg_end( arguments);
 }
 
 @end
