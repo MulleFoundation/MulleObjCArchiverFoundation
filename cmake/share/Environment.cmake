@@ -60,7 +60,7 @@ if( NOT __ENVIRONMENT__CMAKE__)
       endif()
    else()
       # temporary fix until mulle-objc 0.16 release
-      if( NOT "$ENV{MULLE_MAKE_VERSION}" STREQUAL "")
+      if( NOT "$ENV{MULLE_MAKE_VERSION}" STREQUAL "") 
          if( "$ENV{MULLE_MAKE_VERSION}" VERSION_LESS 0.14.0)
             string( REPLACE ":" ";" MULLE_SDK_PATH "${MULLE_SDK_PATH}")
          endif()
@@ -206,7 +206,6 @@ if( NOT __ENVIRONMENT__CMAKE__)
    message( STATUS "CMAKE_PREFIX_PATH=\"${CMAKE_PREFIX_PATH}\"" )
    message( STATUS "CMAKE_INSTALL_PREFIX=\"${CMAKE_INSTALL_PREFIX}\"" )
    # message( STATUS "TMP_INCLUDE_DIRS=\"${TMP_INCLUDE_DIRS}\"" )
-
 
    # not sure why cmake doesn't do this itself, we only add the custom
    # paths though
