@@ -40,7 +40,7 @@
    buf = [aDecoder decodeBytesForKey:@"str"
                       returnedLength:&len];
    if( buf)
-      _str = MulleObjCInstanceDuplicateCString( self, buf);
+      _str = MulleObjCInstanceDuplicateUTF8String( self, buf);
    else
       _str = NULL;
    fprintf( stderr, "_str=%p\n", _str);
@@ -64,7 +64,7 @@
 - (void) setStr:(char *) s
 {
    MulleObjCInstanceDeallocateMemory( self, _str);
-   _str = s ? MulleObjCInstanceDuplicateCString( self, s) : s;
+   _str = s ? MulleObjCInstanceDuplicateUTF8String( self, s) : s;
    fprintf( stderr, "_str=%p\n", _str);
 }
 

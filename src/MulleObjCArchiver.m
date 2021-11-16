@@ -272,7 +272,7 @@ NSString  *NSInvalidArchiveOperationException = @"NSInvalidArchiveOperationExcep
 }
 
 
-- (void) _appendCString:(char *) s
+- (void) _appendUTF8String:(char *) s
 {
    [self _appendBytes:s
                length:strlen( s) + 1]; // always with terminating zero
@@ -416,7 +416,7 @@ NSString  *NSInvalidArchiveOperationException = @"NSInvalidArchiveOperationExcep
    case _C_LNG_DBL  : mulle_buffer_add_long_double( &_buffer, *(long double *) p);
                       return( (long double *) p + 1);
 
-   case _C_CHARPTR  : [self _appendCString:*(char **) p];
+   case _C_CHARPTR  : [self _appendUTF8String:*(char **) p];
                       return( (char *) p + 1);
    case _C_COPY_ID  :
    case _C_ID       : [self _appendObject:*(id *) p];
@@ -574,7 +574,7 @@ NSString  *NSInvalidArchiveOperationException = @"NSInvalidArchiveOperationExcep
       substitute = NSMapGet( _classNameSubstitutions, name);
       if( substitute)
          name = substitute;
-      [self _appendCString:name];
+      [self _appendUTF8String:name];
    }
 }
 
@@ -600,7 +600,7 @@ NSString  *NSInvalidArchiveOperationException = @"NSInvalidArchiveOperationExcep
          [NSException raise:NSInconsistentArchiveException
                      format:@"can't archive selector \"%p\" that is "
                              "not registered in the runtime", sel];
-      [self _appendCString:name];
+      [self _appendUTF8String:name];
    }
 }
 

@@ -37,7 +37,8 @@
 #import "NSCoder.h"
 
 
-extern NSString  *NSInconsistentArchiveException;
+MULLE_OBJC_ARCHIVER_FOUNDATION_EXTERN_GLOBAL
+NSString  *NSInconsistentArchiveException;
 
 
 @interface MulleObjCUnarchiver : NSCoder

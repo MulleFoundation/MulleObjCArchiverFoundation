@@ -1,6 +1,8 @@
 cmake_minimum_required( VERSION 3.1)
 
 project( MulleObjCArchiverFoundation C)
+add_definitions( -DMULLE_OBJC_ARCHIVER_FOUNDATION_EXTERN_GLOBAL=extern)
+
 
 set( CMAKE_C_DEBUG_FLAGS "${CMAKE_C_DEBUG_FLAGS} -Wuninitialized")
 
@@ -8,8 +10,6 @@ set( CMAKE_C_DEBUG_FLAGS "${CMAKE_C_DEBUG_FLAGS} -Wuninitialized")
 
 # add cmake module paths to search path
 list( INSERT CMAKE_MODULE_PATH 0 "${PROJECT_SOURCE_DIR}/cmake/share")
-list( INSERT CMAKE_MODULE_PATH 0 "${PROJECT_SOURCE_DIR}/cmake/reflect")
-list( INSERT CMAKE_MODULE_PATH 0 "${PROJECT_SOURCE_DIR}/cmake/reflect")
 list( INSERT CMAKE_MODULE_PATH 0 "${PROJECT_SOURCE_DIR}/cmake/reflect")
 list( INSERT CMAKE_MODULE_PATH 0 "${PROJECT_SOURCE_DIR}/cmake")
 
@@ -20,10 +20,13 @@ include( Files)
 ### Library
 
 if( HEADERS_PHASE)
-   install( FILES ${INSTALL_PUBLIC_HEADERS}  DESTINATION "include/MulleObjCArchiverFoundation")
-   install( FILES ${INSTALL_PRIVATE_HEADERS} DESTINATION "include/MulleObjCArchiverFoundation/private")
-   install( FILES ${CMAKE_INCLUDES}          DESTINATION "include/MulleObjCArchiverFoundation/cmake")
-
+   install( FILES ${INSTALL_PUBLIC_HEADERS}  DESTINATION "include/${PROJECT_NAME}")
+   install( FILES ${INSTALL_PRIVATE_HEADERS} DESTINATION "include/${PROJECT_NAME}/private")
+   install( FILES ${CMAKE_INCLUDES}          DESTINATION "include/${PROJECT_NAME}/cmake")
+   # hopefully temporary fix for Objective-C
+   if( EXISTS "src/reflect/objc-loader.inc")
+      install( FILES src/reflect/objc-loader.inc DESTINATION "include/${PROJECT_NAME}")
+   endif()
    # short cut out
    if( NOT COMPILE_PHASE AND NOT LINK_PHASE)
       return()
