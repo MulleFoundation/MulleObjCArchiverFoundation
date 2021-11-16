@@ -24,8 +24,8 @@ static void   test_i_encode_decode()
          obj  = [[NSArray alloc] initWithArray:@[ @"1", @"2", @"3"]];
          data = [NSArchiver archivedDataWithRootObject:obj];
          obj2 = [NSUnarchiver unarchiveObjectWithData:data];
-         printf( "%s\n", obj ? [obj cStringDescription] : "*nil*");
-         printf( "%s\n", [obj2 cStringDescription]);
+         printf( "%s\n", obj ? [obj UTF8String] : "*nil*");
+         printf( "%s\n", [obj2 UTF8String]);
          [obj release];
       }
       @catch( NSException *exception)

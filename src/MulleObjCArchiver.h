@@ -50,8 +50,11 @@ struct MulleObjCPointerHandleMap
 @class NSData;
 @class NSMutableData;
 
-extern NSString  *NSInconsistentArchiveException;
-extern NSString  *NSInvalidArchiveOperationException;
+MULLE_OBJC_ARCHIVER_FOUNDATION_EXTERN_GLOBAL
+NSString  *NSInconsistentArchiveException;
+
+MULLE_OBJC_ARCHIVER_FOUNDATION_EXTERN_GLOBAL
+NSString  *NSInvalidArchiveOperationException;
 
 //
 // the MulleObjCArchiver supplies the mechanics but actually does not
