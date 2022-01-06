@@ -45,6 +45,8 @@
 
 // std-c and dependencies
 
+//#define ENCODE_DEBUG
+
 
 @interface MulleObjCArchiver ( Private)
 
@@ -116,8 +118,9 @@
    struct mulle_buffer   memo;
    unsigned char         tmp[ 0x400];
 
+#ifdef ENCODE_DEBUG
    fprintf( stderr, "key=%p\n", key);
-
+#endif
    [self _appendKey:key];
 
    memo = _buffer;
@@ -150,10 +153,11 @@
 - (void) encodeObject:(id) obj
                forKey:(NSString *) key
 {
+#ifdef ENCODE_DEBUG  
    fprintf( stderr, "key=%p\n", key);
    fprintf( stderr, "obj=%p\n", obj);
-   fprintf( stderr, "obj=%p\n", &obj);
-
+   fprintf( stderr, "&obj=%p\n", &obj);
+#endif
    [self encodeValueOfObjCType:@encode( id)
                             at:&obj
                            key:key];

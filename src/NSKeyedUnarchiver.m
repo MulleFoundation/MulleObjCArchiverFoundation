@@ -185,7 +185,7 @@
 {
    BOOL   value;
 
-   [self _decodeValueOfObjCType:@encode( BOOL)
+   [self _decodeValueOfObjCType:@encode( signed char)
                              at:&value
                             key:key];
    return( value);
