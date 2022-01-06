@@ -218,7 +218,7 @@ static int   check_header_8( struct mulle_buffer *buffer, char *expect)
    _mulle_pointerarray_init( &regular, 1024, allocator);
 
    //
-   // separate objects with do decodeWithCoder: from those we don't
+   // separate objects with do decodeWithCoder: from those who don't
    //
    rover = NSEnumerateMapTable( _objects);
    while( NSNextMapEnumeratorPair( &rover, &obj_index, (void **) &obj))

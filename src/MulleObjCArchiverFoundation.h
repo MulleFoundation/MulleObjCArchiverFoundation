@@ -37,7 +37,7 @@
 #import "import.h"
 
 // keep this in sync with MULLE_OBJC_VERSION, else pain! (why ?)
-#define MULLE_OBJC_ARCHIVER_FOUNDATION_VERSION   ((0 << 20) | (19 << 8) | 0)
+#define MULLE_OBJC_ARCHIVER_FOUNDATION_VERSION   ((0 << 20) | (20 << 8) | 0)
 
 // we do it manually...
 
@@ -45,13 +45,8 @@
 //#import "_MulleObjCArchiverFoundation-provide.h"
 
 
-#if MULLE_OBJC_VERSION < ((0 << 20) | (17 << 8) | 0)
-# error "MulleObjC is too old"
+#ifdef __has_include
+# if __has_include( "_MulleObjCArchiverFoundation-versioncheck.h")
+#  include "_MulleObjCArchiverFoundation-versioncheck.h"
+# endif
 #endif
-#if MULLE_OBJC_CONTAINER_FOUNDATION_VERSION < ((0 << 20) | (17 << 8) | 0)
-# error "MulleObjC is too old"
-#endif
-#if MULLE_OBJC_VALUE_FOUNDATION_VERSION < ((0 << 20) | (17 << 8) | 0)
-# error "MulleObjC is too old"
-#endif
-
