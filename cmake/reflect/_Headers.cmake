@@ -71,5 +71,6 @@ src/NSKeyedUnarchiver.h
 src/NSObject+NSCoder.h
 src/NSUnarchiver.h
 src/mulle-buffer-archiver.h
+src/reflect/_MulleObjCArchiverFoundation-versioncheck.h
 )
 
