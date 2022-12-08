@@ -122,7 +122,6 @@ static int   check_header_8( struct mulle_buffer *buffer, char *expect)
    char                    *name;
    char                    *substitution;
    mulle_objc_uniqueid_t   clshash;
-   mulle_objc_uniqueid_t   ivarhash;
    struct blob             *blob;
    unsigned int            i, n;
    unsigned int            name_index;
@@ -134,7 +133,7 @@ static int   check_header_8( struct mulle_buffer *buffer, char *expect)
    for( i = 0; i < n; i++)
    {
       version    = (NSUInteger) mulle_buffer_next_integer( &_buffer);
-      ivarhash   = (mulle_objc_uniqueid_t) mulle_buffer_next_integer( &_buffer);
+      (void) mulle_buffer_next_integer( &_buffer); // ivarhash
       name_index = (unsigned int) mulle_buffer_next_integer( &_buffer);
 
       // write down class name
