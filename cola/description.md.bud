@@ -1,0 +1,5 @@
+These classes help with serializing objects. Typically you serialize them
+into a file or into an NSData for transport over the internet.
+
+Binary serialization has somewhat fallen out of favor recently, but can still
+be useful for caches and the like.
