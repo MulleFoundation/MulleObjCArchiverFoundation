@@ -1,6 +1,6 @@
 {
    "name" : "MulleObjCArchiverFoundation",
-   "version" : "0.20.2",
+   "version" : "0.20.3",
    "description" : "NSCoding classes like NSArchiver/NSUnarchiver",
    "keywords" : [],
    "license" : "BSD-3-Clause",
@@ -33,7 +33,6 @@
       "src/NSObject+NSCoder.m",
       "src/NSUnarchiver.h",
       "src/NSUnarchiver.m",
-      "src/reflect/objc-loader.inc",
       "src/reflect/_MulleObjCArchiverFoundation-export.h",
       "src/reflect/_MulleObjCArchiverFoundation-import-private.h",
       "src/reflect/_MulleObjCArchiverFoundation-import.h",
