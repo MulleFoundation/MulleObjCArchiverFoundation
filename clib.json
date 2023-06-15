@@ -33,6 +33,7 @@
       "src/NSObject+NSCoder.m",
       "src/NSUnarchiver.h",
       "src/NSUnarchiver.m",
+      "src/reflect/objc-loader.inc",
       "src/reflect/_MulleObjCArchiverFoundation-export.h",
       "src/reflect/_MulleObjCArchiverFoundation-import-private.h",
       "src/reflect/_MulleObjCArchiverFoundation-import.h",
