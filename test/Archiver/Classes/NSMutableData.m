@@ -23,7 +23,7 @@ static void    clone( id obj)
 }
 
 
-static mulle_utf8_t    hoehoe[] =
+static unsigned char   hoehoe[] =
 {
    0x22, 0x48, 0xc3, 0xb6, 0x68, 0xc3, 0xb6, 0x68,
    0xc3, 0xb6, 0x2c, 0x20, 0x77, 0x69, 0x72, 0x20,
@@ -41,7 +41,7 @@ static mulle_utf8_t    hoehoe[] =
 + (id) dataWithUTF8String:(char *) s
 {
   return( [self dataWithBytes:s
-                       length:mulle_utf8_strlen( (mulle_utf8_t *) s)]);
+                       length:strlen( s)]);
 }
 @end
 

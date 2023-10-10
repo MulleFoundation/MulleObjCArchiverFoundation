@@ -44,7 +44,7 @@ static char    hoehoe[] =
 + (id) dataWithUTF8String:(char *) s
 {
   return( [self dataWithBytes:s
-                       length:mulle_utf8_strlen( (mulle_utf8_t *) s)]);
+                       length:mulle_utf8_strlen( s)]);
 }
 @end
 
