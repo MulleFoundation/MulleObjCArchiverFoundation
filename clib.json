@@ -1,7 +1,7 @@
 {
    "name" : "MulleObjCArchiverFoundation",
-   "version" : "0.20.3",
-   "description" : "NSCoding classes like NSArchiver/NSUnarchiver",
+   "version" : "0.21.0",
+   "description" : "🚪 NSCoding classes like NSArchiver/NSUnarchiver",
    "keywords" : [],
    "license" : "BSD-3-Clause",
    "repo" : "MulleFoundation/MulleObjCArchiverFoundation",
