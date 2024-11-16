@@ -1,6 +1,6 @@
 cmake_minimum_required( VERSION 3.1)
 
-project( MulleObjCArchiverFoundation C)
+project( MulleObjCArchiverFoundation VERSION 0.22.0 LANGUAGES C)
 
 
 set( CMAKE_C_DEBUG_FLAGS "${CMAKE_C_DEBUG_FLAGS} -Wuninitialized")
@@ -8,9 +8,9 @@ set( CMAKE_C_DEBUG_FLAGS "${CMAKE_C_DEBUG_FLAGS} -Wuninitialized")
 ### mulle-sde environment
 
 # add cmake module paths to search path
-list( INSERT CMAKE_MODULE_PATH 0 "${PROJECT_SOURCE_DIR}/cmake/share")
-list( INSERT CMAKE_MODULE_PATH 0 "${PROJECT_SOURCE_DIR}/cmake/reflect")
-list( INSERT CMAKE_MODULE_PATH 0 "${PROJECT_SOURCE_DIR}/cmake")
+list( INSERT CMAKE_MODULE_PATH 0 "${CMAKE_CURRENT_SOURCE_DIR}/cmake/share")
+list( INSERT CMAKE_MODULE_PATH 0 "${CMAKE_CURRENT_SOURCE_DIR}/cmake/reflect")
+list( INSERT CMAKE_MODULE_PATH 0 "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
 
 include( Environment)
 
@@ -45,4 +45,10 @@ if( LINK_PHASE)
 endif()
 
 include( InstallLibrary)
+
+if( LINK_PHASE)
+   include( InstallCMakeInclude)
+   include( InstallCMakePackage)
+endif() 
+
 include( FinalOutput OPTIONAL)
