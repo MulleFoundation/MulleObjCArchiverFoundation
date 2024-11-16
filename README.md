@@ -42,15 +42,31 @@ be useful for caches and the like.
 
 ## Add
 
+**This project is a component of the [MulleFoundation](//github.com/MulleFoundation/MulleFoundation) library.
+As such you usually will *not* add or install it individually, unless you
+specifically do not want to link against `MulleFoundation`.**
+
+
+### Add as an individual component
+
 Use [mulle-sde](//github.com/mulle-sde) to add MulleObjCArchiverFoundation to your project:
 
 ``` sh
 mulle-sde add github:MulleFoundation/MulleObjCArchiverFoundation
 ```
 
-## Install
+To only add the sources of MulleObjCArchiverFoundation with dependency
+sources use [clib](https://github.com/clibs/clib):
 
-### Install with mulle-sde
+
+``` sh
+clib install --out src/MulleFoundation MulleFoundation/MulleObjCArchiverFoundation
+```
+
+Add `-isystem src/MulleFoundation` to your `CFLAGS` and compile all the sources that were downloaded with your project.
+
+
+## Install
 
 Use [mulle-sde](//github.com/mulle-sde) to build and install MulleObjCArchiverFoundation and all dependencies:
 
@@ -59,7 +75,7 @@ mulle-sde install --prefix /usr/local \
    https://github.com/MulleFoundation/MulleObjCArchiverFoundation/archive/latest.tar.gz
 ```
 
-### Manual Installation
+### Legacy Installation
 
 Install the requirements:
 
