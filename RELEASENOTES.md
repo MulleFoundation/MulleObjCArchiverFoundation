@@ -1,3 +1,9 @@
+## 0.22.0
+
+
+* adapt to changes in MulleObjC
+
+
 ## 0.21.0
 
 * transition from `mulle_utf8_t` to char
