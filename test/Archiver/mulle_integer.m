@@ -23,7 +23,7 @@ static void   test_uinteger( uint64_t value)
    struct mulle_buffer   buffer;
    uint64_t              read;
 
-   mulle_buffer_init( &buffer, NULL);
+   mulle_buffer_init_default( &buffer);
    mulle_buffer_add_integer( &buffer, value);
    mulle_buffer_set_seek( &buffer, 0, SEEK_SET);
    read = mulle_buffer_next_integer( &buffer);
@@ -41,7 +41,7 @@ static void   test_integer( int64_t value)
    struct mulle_buffer   buffer;
    int64_t               read;
 
-   mulle_buffer_init( &buffer, NULL);
+   mulle_buffer_init_default( &buffer);
    mulle_buffer_add_integer( &buffer, (uint64_t) value);
    mulle_buffer_set_seek( &buffer, 0, SEEK_SET);
    read = (int64_t) mulle_buffer_next_integer( &buffer);
