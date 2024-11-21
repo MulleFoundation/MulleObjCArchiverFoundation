@@ -19,7 +19,7 @@ static void   test_float( float value)
    struct mulle_buffer   buffer;
    float                 read;
 
-   mulle_buffer_init( &buffer, NULL);
+   mulle_buffer_init_default( &buffer);
    mulle_buffer_add_float( &buffer, value);
    mulle_buffer_set_seek( &buffer, 0, SEEK_SET);
    read = mulle_buffer_next_float( &buffer);
@@ -37,7 +37,7 @@ static void   test_double( double value)
    struct mulle_buffer   buffer;
    double                read;
 
-   mulle_buffer_init( &buffer, NULL);
+   mulle_buffer_init_default( &buffer);
    mulle_buffer_add_double( &buffer, value);
    mulle_buffer_set_seek( &buffer, 0, SEEK_SET);
    read = mulle_buffer_next_double( &buffer);
