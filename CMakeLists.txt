@@ -1,6 +1,6 @@
 cmake_minimum_required( VERSION 3.1)
 
-project( MulleObjCArchiverFoundation VERSION 0.22.0 LANGUAGES C)
+project( MulleObjCArchiverFoundation VERSION 0.22.1 LANGUAGES C)
 
 
 set( CMAKE_C_DEBUG_FLAGS "${CMAKE_C_DEBUG_FLAGS} -Wuninitialized")
