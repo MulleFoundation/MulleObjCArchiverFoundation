@@ -9,9 +9,9 @@ Binary serialization has somewhat fallen out of favor recently, but can still
 be useful for caches and the like.
 
 
-| Release Version                                       | Release Notes
-|-------------------------------------------------------|--------------
-| ![Mulle kybernetiK tag](https://img.shields.io/github/tag/MulleFoundation/MulleObjCArchiverFoundation.svg) [![Build Status](https://github.com/MulleFoundation/MulleObjCArchiverFoundation/workflows/CI/badge.svg)](//github.com/MulleFoundation/MulleObjCArchiverFoundation/actions) | [RELEASENOTES](RELEASENOTES.md) |
+| Release Version                                       | Release Notes  | AI Documentation
+|-------------------------------------------------------|----------------|---------------
+| ![Mulle kybernetiK tag](https://img.shields.io/github/tag/MulleFoundation/MulleObjCArchiverFoundation.svg) [![Build Status](https://github.com/MulleFoundation/MulleObjCArchiverFoundation/workflows/CI/badge.svg)](//github.com/MulleFoundation/MulleObjCArchiverFoundation/actions) | [RELEASENOTES](RELEASENOTES.md) | [DeepWiki for MulleObjCArchiverFoundation](https://deepwiki.com/MulleFoundation/MulleObjCArchiverFoundation)
 
 
 ## API
