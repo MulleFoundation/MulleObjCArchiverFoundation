@@ -1,6 +1,6 @@
 {
    "name" : "MulleObjCArchiverFoundation",
-   "version" : "0.22.2",
+   "version" : "0.22.3",
    "description" : "🚪 NSCoding classes like NSArchiver/NSUnarchiver",
    "keywords" : [],
    "license" : "BSD-3-Clause",
