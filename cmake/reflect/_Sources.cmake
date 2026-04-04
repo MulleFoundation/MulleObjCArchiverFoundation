@@ -26,5 +26,5 @@ src/NSUnarchiver.m
 # contents selected with patternfile ??-source--stage2-sources
 #
 set( STAGE2_SOURCES
-src/MulleObjCLoader+MulleObjCArchiverFoundation.m
+src/MulleObjCDeps+MulleObjCArchiverFoundation.m
 )

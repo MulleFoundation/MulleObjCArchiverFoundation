@@ -62,7 +62,7 @@ src/generic/include.h
 set( PUBLIC_HEADERS
 src/MulleObjCArchiverFoundation.h
 src/MulleObjCArchiver.h
-src/MulleObjCLoader+MulleObjCArchiverFoundation.h
+src/MulleObjCDeps+MulleObjCArchiverFoundation.h
 src/MulleObjCUnarchiver.h
 src/NSArchiver+OSBase.h
 src/NSArchiver.h
