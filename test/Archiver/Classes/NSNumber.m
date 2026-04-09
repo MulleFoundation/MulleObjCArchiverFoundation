@@ -11,6 +11,11 @@
 #include <float.h>
 
 
+@interface NSObject (Forward)
+- (NSString *) debugDescription;
+@end
+
+
 static void   clone_bool( BOOL value)
 {
    NSData   *data;

@@ -3,12 +3,13 @@
    {
       description="🚪 NSCoding classes like NSArchiver/NSUnarchiver";
       domain="github";
+      language="c";
+      dialect="objc";
       name="MulleObjCArchiverFoundation";
       user="MulleFoundation";
       repo="MulleObjCArchiverFoundation";
       homepage="https://github.com/MulleFoundation/MulleObjCArchiverFoundation";
       license="BSD-3-Clause";
-      version="0.22.3";
    };
    dependencies =
    (
