@@ -76,3 +76,6 @@ test*/**/*.test.*
 !/AGENTS.md
 !/README.md
 *.tmp.*
+*.test.*
+.roam
+.idea
