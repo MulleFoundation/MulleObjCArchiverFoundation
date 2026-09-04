@@ -27,6 +27,11 @@ be useful for caches and the like.
 
 
 
+## Documentation & Guides
+
+* [API Summary](asset/dox/api/toc)
+
+
 
 
 ## Requirements

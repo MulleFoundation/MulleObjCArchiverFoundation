@@ -79,3 +79,6 @@ test*/**/*.test.*
 *.test.*
 .roam
 .idea
+.kiro/
+TODO.md
+REVIEW.md
