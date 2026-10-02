@@ -44,6 +44,6 @@
    ],
    "dependencies" : {
       "MulleFoundation/MulleObjCStandardFoundation": "*",
-      "mulle-objc/mulle-objc-list": "*"
+      "mulle-objc/mulle-objc-tools": "*"
    }
 }
