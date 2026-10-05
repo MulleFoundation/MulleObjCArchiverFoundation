@@ -9,6 +9,7 @@
       user="MulleFoundation";
       repo="MulleObjCArchiverFoundation";
       homepage="https://github.com/MulleFoundation/MulleObjCArchiverFoundation";
+      version="0.23.0";
       license="BSD-3-Clause";
    };
    dependencies =
