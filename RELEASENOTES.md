@@ -3,6 +3,7 @@
 
 
 
+
 feature: improve CMake package integration for library consumers
 
 * `add_subdirectory` consumers now inherit the source include directory and transitive dependency link libraries
