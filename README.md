@@ -80,7 +80,7 @@ mulle-sde install --prefix /usr/local \
    https://github.com/MulleFoundation/MulleObjCArchiverFoundation/archive/latest.tar.gz
 ```
 
-### Legacy Installation
+### Manual Installation
 
 Install the requirements:
 
